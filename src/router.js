@@ -3,6 +3,8 @@ import Home from "./components/Home.vue";
 import AllBooks from "./components/AllBooks.vue";
 import Community from "./components/community.vue";
 import BookDetails from "./components/BookDetails.vue";
+import Write from "./components/Write.vue";
+import Profile from "./components/Profile.vue";
 
 
 const router = createRouter({
@@ -34,6 +36,18 @@ const router = createRouter({
                     component: BookDetails,
                 }
             ]
+        },
+
+        {
+            path: '/write',
+            name: 'Write',
+            component: Write
+        },
+
+        {
+            path: '/Profile',
+            name: 'Profile',
+            component: Profile
         }
     ]
 })

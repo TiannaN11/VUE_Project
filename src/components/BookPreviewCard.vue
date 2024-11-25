@@ -31,4 +31,9 @@ defineProps({
   border-radius: 5px;
   border: 1px dashed gray;
 }
+
+img {
+  width: 315px;
+  height: 475px;
+}
 </style>

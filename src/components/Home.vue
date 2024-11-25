@@ -11,9 +11,12 @@ import BookPreviewCard from "./BookPreviewCard.vue";
   <primary-template>
     <section class="main">
 
-      <div class="introduction">
-        <h1>Stories For Everyone</h1>
-        <h3>Get Ready to Find your new favorite book and dive into a whole new world</h3>
+      <div class="hero">
+        <img src="../assets/home-hero-2.png" alt="hero"/>
+        <div class="bottom-right">
+          <h1>Stories For Everyone</h1>
+          <h3>Get ready to find your new favorite book and dive into a whole new world</h3>
+        </div>
       </div>
 
       <div class="picks">
@@ -23,6 +26,16 @@ import BookPreviewCard from "./BookPreviewCard.vue";
         </div>
       </div>
 
+      <div class="checkout">
+        <h1>Checkout</h1>
+        <h3>to see what's new with friends and other fellow readers!</h3>
+      </div>
+
+      <div class="Choose">
+        <h1>Choose Your Genre!</h1>
+        <h3>With so many books to choose from, let's narrow some niche's down for you</h3>
+      </div>
+
     </section>
   </primary-template>
 </template>
@@ -30,27 +43,25 @@ import BookPreviewCard from "./BookPreviewCard.vue";
 <style scoped>
 h1 {
   text-align: center;
-  font-family: "Montsterrat", sans-serif;
-  font-size: 5em;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(50px, 8vw, 100px);
 }
 
 h2 {
   text-align: center;
   font-family: "Montsterrat", sans-serif;
   display: flex;
-  font-size: 2em;
+  font-size: clamp(20px, 4vw, 80px);
 }
-
 
 h3 {
   text-align: center;
   font-family: "Montsterrat", sans-serif;
-  font-size: 1.5em;
+  font-size: clamp(10px, 4vw, 30px);
 }
 
-
-img {
-  padding: 1rem;
+BookPreviewCard img {
+  align-content: center;
 }
 
 .picks {
@@ -58,6 +69,28 @@ img {
   display: flex;
   flex-wrap: wrap;
 }
+
+.hero{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero img{
+  max-width: 100%;
+  align-content: flex-start;
+  display: flex;
+  border-bottom-left-radius: 20em;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 1px;
+  right: 16px;
+}
+
+
+
 </style>
 
 
