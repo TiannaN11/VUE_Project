@@ -6,11 +6,19 @@ import PrimaryTemplate from "./Template/PrimaryTemplate.vue";
 <template>
   <primary-template>
     <slot>
-      <h1>Connect with Your Community!</h1>
+      <div class="book-carousel">
+        <h1>Straight from BookTok</h1>
+      </div>
+
     </slot>
   </primary-template>
 </template>
 
 <style scoped>
+
+h1, h2, h3, h4 {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-style: normal;
+}
 
 </style>

@@ -33,7 +33,7 @@ defineProps({
 }
 
 img {
-  width: 315px;
-  height: 475px;
+  width: 200px;
+  height: 320px;
 }
 </style>
