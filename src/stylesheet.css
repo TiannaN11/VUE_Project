@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, a, p {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-style: normal;
+    color: white;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: clamp(2.5em, 6vw, 7em);
+    margin-bottom: 0;
+}
+
+h2 {
+    font-weight: 800;
+    display: flex;
+    font-size: clamp(1em, 6vw, 2.5em);
+    text-align: left;
+    color: #4F2210;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: clamp(0.5em, 6vw, 1.5em);
+    margin-top: 1rem;
+}
+
+h4 {
+    color: #4F2210;
+    font-weight: 600;
+    font-size: clamp(0.2em, 6vw, 1.5em);
+}
+
+h5 {
+    color: #4F2210;
+    font-size: clamp(0.1em, 6vw, 1em);
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1rem;
+    color: #4F2210;
+    font-size: 1em;
+}
+
+
+
+
