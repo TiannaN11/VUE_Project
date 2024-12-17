@@ -2,7 +2,6 @@
 import {useRoute, useRouter} from "vue-router"
 import allBooks from "./MOCK_DATA.js"
 import PrimaryTemplate from "./Template/PrimaryTemplate.vue";
-import Bookstores from "./Bookstores.vue";
 
 const route = useRoute()
 const router = useRouter()
@@ -25,7 +24,6 @@ const book = allBooks.data.filter(book => book.id === paramId)[0]
         <div class="container">
 
           <div class="left">
-
             <div class="book-cover">
               <router-link :to=" { name: 'BookDetails', params: { id: book.id } }">
                 <img :src="'../../src/assets/' + book.bookCover" alt="cover"/>
@@ -34,15 +32,15 @@ const book = allBooks.data.filter(book => book.id === paramId)[0]
 
             <div class="rating">
               <img :src="'../../src/assets/' + book.stars" alt="stars"/>
+              <p>{{book.rating}}</p>
             </div>
           </div>
-
 
           <div class="book-info">
             <h6>Book Title:</h6>  <p>{{ book.book_title}}</p>
             <h6>Author:</h6> <p>{{ book.author}}</p>
             <h6>Summary:</h6> <p> {{ book.about }}</p>
-            <h6>Genre:</h6> <p>{{ book.genre }} </p>
+            <h6>Genre:</h6> <p>{{ book.genre }}</p>
             <h6>Page Count:</h6> <p>{{ book.page_count }}</p>
             <h6>Publication Date:</h6> <p>{{book.publication_date}}</p>
 
@@ -80,13 +78,14 @@ h1, h2, h4, p {
 }
 
 .container {
-  display: flex;
-  padding: 0.5rem;
+  flex-direction: column;
+  padding: 2.5rem;
   border-radius: 5px;
 
 
   .book-info {
     flex-direction: column;
+    margin-bottom: 5rem;
   }
 
 }
@@ -103,12 +102,30 @@ h1, h2, h4, p {
   }
 }
 
-
-img {
-  width: 200px;
-  height: 320px;
+.book-cover {
+  img {
+    width: 200px;
+    height: 320px;
+  }
 }
 
+.rating {
+  img {
+    width: 200px;
+    height: 35px;
+    padding: 1rem;
+  }
+
+  p{
+    text-align: center;
+    margin: 0;
+  }
+}
+
+
+.left {
+  justify-items: center;
+}
 
 
 /*ipad (tablet and up) */
@@ -121,18 +138,29 @@ img {
   }
 
   .container {
+    display: flex;
+    flex-direction: row;
+    padding: 4rem;
+
     .book-info {
       flex-direction: row;
     }
-
   }
 
-
-  img {
-    width: 380px;
-    height: 550px;
+  .book-cover {
+    img {
+      width: 380px;
+      height: 550px;
+    }
   }
 
+  .rating {
+    img {
+      width: 370px;
+      height: 65px;
+      padding: 1rem;
+    }
+  }
 }
 
 

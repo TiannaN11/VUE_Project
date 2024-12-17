@@ -11,7 +11,6 @@
 export default {
   name: 'BookLine'
 }
-import bookData from "./MOCK_DATA.js";
 </script>
 
 

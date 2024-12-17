@@ -7,9 +7,9 @@ const data = [
         page_count: 345,
         reviews: 19400,
         rating: 3.89 / 5,
-        stars: "stars.png",
+        stars: "4stars.png",
         bookCover: "book-cover-good-material.jpg",
-        genre: ['fiction', 'fantasy', 'horror'],
+        genre: "Historical Fiction, Contemporary, Magical Realism",
         about: "NEW YORK TIMES BESTSELLER • ONE OF THE NEW YORK TIMES BOOK REVIEW'S 10 BEST BOOKS OF THE YEAR • A TODAY SHOW #ReadWithJenna BOOK CLUB PICK • From the New York Times best-selling author of Ghosts and Everything I Know About Love: a story of heartbreak and friendship and how to survive both\n" +
             "\n" +
             "“One of the foremost ‘it’ writers of our time . . . Whatever ails you, Alderton can fix it with her intimate wisdom . . . There is no writer quite like Dolly Alderton working today.\"\n" +
@@ -31,13 +31,15 @@ const data = [
     },
     {
         id: "2",
-        book_title: "Real American",
+        book_title: "Real Americans",
         author: "John Smythe",
         publication_date: "07/30/2024",
         page_count: 416,
         reviews: 5906,
-        rating: 4 / 5,
+        rating: "4 / 5 stars",
+        stars: "4stars.png",
         bookCover: "book-cover-real-americans.jpg",
+        genre: "Historical Fiction | Contemporary | Magical Realism",
         about: "Real Americans begins on the precipice of Y2K in New York City, when twenty-two-year-old Lily Chen, an unpaid intern at a slick media company, meets Matthew. Matthew is everything Lily is not: easygoing and effortlessly attractive, a native East Coaster and, most notably, heir to a vast pharmaceutical empire. Lily couldn't be more different: flat-broke, raised in Tampa, the only child of scientists who fled Mao’s Cultural Revolution. Despite all this, Lily and Matthew fall in love.\n" +
             "\n" +
             "In 2021, fifteen-year-old Nick Chen has never felt like he belonged on the isolated Washington island where he lives with his single mother, Lily. He can't shake the sense she's hiding something. When Nick sets out to find his biological father, the journey threatens to raise more questions than answers.\n" +
