@@ -1,6 +1,9 @@
 <template>
   <div class="Choose">
     <h2>Choose Your Genre!</h2>
+    <div class="genres">
+
+    </div>
     <h4>With so many books to choose from, let's narrow some niche's down for you</h4>
   </div>
 </template>
@@ -10,8 +13,13 @@ export default {
 }
 </script>
 <style scoped>
-BookPreviewCard img {
-  align-content: center;
+
+.Choose {
+  h2, h4 {
+    padding: 1rem;
+    text-align: center;
+    justify-content: center;
+  }
 }
 
 
@@ -24,11 +32,6 @@ BookPreviewCard img {
   .hero img {
     width: 100%;
     border-bottom-left-radius: 20em;
-  }
-
-  h1, h2 {
-    padding-right: 2rem;
-    margin: 0;
   }
 }
 

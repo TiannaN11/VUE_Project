@@ -1,6 +1,10 @@
 <template>
   <div class="checkout">
 
+    <div class="checkout img">
+      <img src="../assets/checkout-homepage.webp" height="1127" width="1400" alt="checkout"/>
+    </div>
+
     <div class="checkout-text">
       <h2>Checkout</h2>
       <h4>to see what's new with friends and other fellow readers!</h4>
@@ -14,10 +18,6 @@
       </router-link>
     </div>
 
-    <div class="checkout img">
-      <img src="../assets/checkout-homepage.webp" height="1127" width="1400" alt="checkout"/>
-    </div>
-
   </div>
 </template>
 <script>
@@ -28,55 +28,64 @@ export default {
 <style scoped>
 
 .checkout {
-  margin-top: 2em;
-  margin-bottom: 2em;
-  display: flex;
-
-  .text {
-    flex-direction: column;
-  }
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
 
   .checkout img {
-    margin-left: auto;
-    border-bottom-left-radius: 500px;
-    border-top-left-radius: 500px;
-    width: 200%;
+    width: 100%;
     height: 100%;
-    position: relative;
   }
 
   h2, h4 {
     width: 70%;
     margin-left: 2rem;
-    border: 10px solid black;
   }
 
   a {
     svg {
-      margin-left: 1rem;
+      margin-left: 6rem;
+      scale: 150%;
     }
+
+    svg:hover {
+      scale: 155%;
+    }
+  }
+
+  .checkout-text{
+    margin-left: 1rem;
   }
 }
 
 
+
+
 /*ipad (tablet and up) */
 @media only screen and (width > 700px) {
+
+  .checkout {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .checkout-text {
+    width: 50%;
+  }
+
   .checkout img {
-    border-bottom-left-radius: 200px;
-    border-top-left-radius: 200px;
+    border-bottom-right-radius: 5000px;
+    border-top-right-radius: 5000px;
   }
 
   h2, h4 {
-    width: 100%;
+    width: 40%;
   }
 }
 
 /*desktop*/
 @media only screen and (width > 800px) {
-  .checkout img {
-    border-bottom-left-radius: 100px;
-    border-top-left-radius: 100px;
-  }
+
 }
 
 </style>

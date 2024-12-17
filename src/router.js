@@ -5,7 +5,7 @@ import Community from "./components/community.vue";
 import BookDetails from "./components/BookDetails.vue";
 import Write from "./components/Write.vue";
 import Profile from "./components/Profile.vue";
-
+import Search from "./components/Search.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -48,7 +48,14 @@ const router = createRouter({
             path: '/Profile',
             name: 'Profile',
             component: Profile
+        },
+
+        {
+            path: '/search',
+            name: 'Search',
+            component: Search
         }
+
     ]
 })
 

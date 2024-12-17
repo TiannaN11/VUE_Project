@@ -1,5 +1,6 @@
 <script setup>
 import Profile from "../Profile.vue";
+
 </script>
 
 
@@ -44,6 +45,7 @@ import Profile from "../Profile.vue";
           </svg>
         </router-link>
       </div>
+
       <nav>
         <router-link :to="{ name: 'Home'}">
           <svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -79,30 +81,31 @@ import Profile from "../Profile.vue";
           Community
         </router-link>
 
-        <router-link :to="{name: 'Write'}">
-          <svg width="20" height="20" viewBox="0 0 40 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_56_458)">
-              <path
-                  d="M19.8831 0.156372L23.6234 3.87185C26.4877 6.71715 26.4877 11.3379 23.6234 14.1832L19.8831 17.8987L16.2512 14.2909C13.3272 11.3863 13.3272 6.66874 16.2512 3.76413L19.8831 0.156372Z"
-                  fill="#4F2210"/>
-              <path
-                  d="M19.8502 19.2559L23.5905 22.9713C26.4549 25.8166 26.4549 30.4374 23.5905 33.2827L19.8502 36.9982L16.2183 33.3904C13.2943 30.4858 13.2943 25.7682 16.2183 22.8636L19.8502 19.2559Z"
-                  fill="#4F2210"/>
-              <path
-                  d="M0.450317 17.9941L4.35583 14.4504C7.34666 11.7365 11.9935 11.9453 14.7255 14.9163L18.293 18.7959L14.5007 22.2369C11.4475 25.0073 6.70327 24.7941 3.91437 21.7612L0.450317 17.9941Z"
-                  fill="#4F2210"/>
-              <path
-                  d="M21.4945 18.6489L25.4 15.1051C28.3909 12.3913 33.0377 12.6001 35.7697 15.571L39.3372 19.4506L35.5449 22.8917C32.4917 25.662 27.7475 25.4489 24.9586 22.416L21.4945 18.6489Z"
-                  fill="#4F2210"/>
-            </g>
-            <defs>
-              <clipPath id="clip0_56_458">
-                <rect width="38.8898" height="36.8429" fill="white" transform="translate(0.449707 0.157043)"/>
-              </clipPath>
-            </defs>
-          </svg>
-          Write
-        </router-link>
+          <router-link :to="{name: 'Write'}">
+            <svg width="20" height="20" viewBox="0 0 40 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_56_458)">
+                <path
+                    d="M19.8831 0.156372L23.6234 3.87185C26.4877 6.71715 26.4877 11.3379 23.6234 14.1832L19.8831 17.8987L16.2512 14.2909C13.3272 11.3863 13.3272 6.66874 16.2512 3.76413L19.8831 0.156372Z"
+                    fill="#4F2210"/>
+                <path
+                    d="M19.8502 19.2559L23.5905 22.9713C26.4549 25.8166 26.4549 30.4374 23.5905 33.2827L19.8502 36.9982L16.2183 33.3904C13.2943 30.4858 13.2943 25.7682 16.2183 22.8636L19.8502 19.2559Z"
+                    fill="#4F2210"/>
+                <path
+                    d="M0.450317 17.9941L4.35583 14.4504C7.34666 11.7365 11.9935 11.9453 14.7255 14.9163L18.293 18.7959L14.5007 22.2369C11.4475 25.0073 6.70327 24.7941 3.91437 21.7612L0.450317 17.9941Z"
+                    fill="#4F2210"/>
+                <path
+                    d="M21.4945 18.6489L25.4 15.1051C28.3909 12.3913 33.0377 12.6001 35.7697 15.571L39.3372 19.4506L35.5449 22.8917C32.4917 25.662 27.7475 25.4489 24.9586 22.416L21.4945 18.6489Z"
+                    fill="#4F2210"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_56_458">
+                  <rect width="38.8898" height="36.8429" fill="white" transform="translate(0.449707 0.157043)"/>
+                </clipPath>
+              </defs>
+            </svg>
+            Write
+          </router-link>
+
 
         <router-link :to="{ name: 'AllBooks'}">
           <svg width="20" height="20" viewBox="0 0 35 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -135,6 +138,16 @@ import Profile from "../Profile.vue";
           Profile
         </router-link>
       </nav>
+
+      <div class="search">
+        <router-link :to="{ name: 'Search'}">
+          <svg width="30" height="30" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27.5 15.3571C27.5 22.5137 21.8484 28.2143 15 28.2143C8.15157 28.2143 2.5 22.5137 2.5 15.3571C2.5 8.20056 8.15157 2.5 15 2.5C21.8484 2.5 27.5 8.20056 27.5 15.3571Z" stroke="#4F2210" stroke-width="5"/>
+            <line x1="3" y1="-3" x2="20.6139" y2="-3" transform="matrix(0.69874 0.715376 -0.69874 0.715376 22.5 26.1071)" stroke="#4F2210" stroke-width="6" stroke-linecap="round"/>
+          </svg>
+        </router-link>
+      </div>
+
     </header>
 
     <section class="main">
@@ -232,6 +245,20 @@ header {
       }
     }
   }
+
+  .search {
+    margin: 2rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    svg {
+      path, line {
+        stroke: white;
+      }
+    }
+  }
+
 }
 
 footer {
@@ -266,7 +293,16 @@ footer {
         }
       }
     }
+
+    .search {
+      svg {
+        path, line {
+          stroke: #4F2210;
+        }
+      }
+    }
   }
+
 
   footer {
     background-color: #C9A97A;

@@ -1,9 +1,7 @@
 <script setup>
 import PrimaryTemplate from "./Template/PrimaryTemplate.vue";
-import bookData from "./MOCK_DATA.js";
-import BookPreviewCard from "./BookPreviewCard.vue";
-import Hero from "./Hero.vue";
-
+import RecentlyRead from "./RecentlyRead.vue";
+import Wishlist from "./Wishlist.vue";
 </script>
 
 <template>
@@ -31,8 +29,36 @@ import Hero from "./Hero.vue";
           <h5> followers </h5>
         </div>
       </div>
-
     </div>
+
+    <div class="User-name">
+      <h4>User Name</h4>
+      <p> been a user since 2022 </p>
+    </div>
+
+    <div class="stats">
+      <div class="books-read">
+        <h2>400</h2>
+        <h5>books read</h5>
+      </div>
+
+      <div class="books-read">
+        <h2>400</h2>
+        <h5>books read</h5>
+      </div>
+
+      <div class="books-read">
+        <h2>400</h2>
+        <h5>books read</h5>
+      </div>
+    </div>
+
+    <RecentlyRead/>
+
+    <RecentlyRead/>
+
+
+
   </div>
   </body>
 
@@ -43,12 +69,24 @@ import Hero from "./Hero.vue";
 
 <style scoped>
 
+h2, h4, h5, p {
+  text-align: center;
+  margin: 0 0;
+  justify-content: center;
+  align-items: center;
+  color: #4F2210;
+}
+
 .image-container {
 
   img {
     display: block;
     width: 100%;
     opacity: 80%;
+    background-size: auto 800px;
+    height: 400px;
+    background-position: center top;
+    background-repeat: no-repeat;
   }
 }
 
@@ -61,20 +99,13 @@ import Hero from "./Hero.vue";
   padding: 1rem;
   text-align: center;
 
-
   .follow-count {
     display: flex;
     gap: 15rem;
     margin-top: 3rem;
-
-    h2, h5 {
-      text-align: center;
-      margin: 0 0;
-    }
-
   }
 
-
+  /*profile img*/
   img {
     opacity: 100%;
     border-radius: 100%;
@@ -87,18 +118,47 @@ import Hero from "./Hero.vue";
   }
 }
 
+.User-name {
+  background-color: #F8E6CC;
+  height: 50px;
+  padding: 2rem;
+}
+
+.stats {
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  background-color: #F8E6CC;
+  width: 100%;
+  height: 120px;
+  align-items: center;
+
+}
+
+
+
 /*ipad (tablet and up) */
 @media only screen and (width > 700px) {
   .overlay-text {
+    top: 25%;
     .follow-count{
       gap: 20rem;
     }
   }
+
+  .User-name {
+    padding-top: 4rem;
+  }
+
+
 }
 
 /*desktop*/
 @media only screen and (width > 800px) {
 
+  .User-name {
+    padding-top: 7.5rem;
+  }
 }
 
 </style>

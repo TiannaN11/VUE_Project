@@ -7,6 +7,9 @@ import Checkout from "./Checkout.vue";
 import ChooseYourGenre from "./ChooseYourGenre.vue";
 import Hero from "./Hero.vue";
 import Newsletter from "./Newsletter.vue";
+import Carousel from "./Carousel.vue";
+import BookLine from "./BookLine.vue";
+
 </script>
 
 <template>
@@ -17,26 +20,33 @@ import Newsletter from "./Newsletter.vue";
     <Hero/>
 
     <div class="picks">
-      <img src="../assets/bookmark_orange.png" alt="bookmark_orange"/>
+
       <div class="picks-title">
         <h2>Picks Made Just For You</h2>
       </div>
-      <div v-for="(book, index) in bookData.data" :key="index">
-        <book-preview-card :book="book" :image-only="true"/>
-      </div>
+
+        <div class="book-line" v-for="(book, index) in bookData.data" :key="index">
+          <book-preview-card :book="book" :image-only="true"/>
+        </div>
+
     </div>
 
     <Checkout/>
 
+    <Carousel/>
+
     <ChooseYourGenre/>
 
     <div class="pick-up">
+
       <div class="picks-title">
         <h2>Pick Up Where You Left Off</h2>
       </div>
-      <div v-for="(book, index) in bookData.data" :key="index">
+
+      <div class="book-line" v-for="(book, index) in bookData.data" :key="index">
         <book-preview-card :book="book" :image-only="true"/>
       </div>
+
     </div>
 
     <Newsletter/>
@@ -51,44 +61,45 @@ BookPreviewCard img {
 }
 
 .picks {
-  display: flex;
-  flex-wrap: wrap;
+  background-image: url("../assets/bookmark-orange.png");
+}
 
-  h2 {
-    /*background*/
-    background-image: url("../assets/bookmark_orange.png");
-  }
-
-  .picks-title {
-    margin: 2rem;
-    width: 100%;
-  }
-
-  img {
-    display: block;
-    width: 100%;
-    text-align: center;
-    line-height: 100px;
-    color: green;
-  }
-
+.picks-title {
+  margin: 1rem 2rem 2rem 1.5rem;
 }
 
 .pick-up {
-  background-color: #88BA1A;
+  background-image: url("../assets/bookmark-green.png");
+}
+
+.book-line {
   display: flex;
   flex-wrap: wrap;
 }
+
+/*bookmarks*/
+.picks, .pick-up {
+  background-size: 32rem;
+  background-repeat: no-repeat;
+  margin: 1rem 0 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 
 
 /*ipad (tablet and up) */
 @media only screen and (width > 700px) {
-  .picks {
-    img {
-      max-width: 50%;
-      margin-bottom: 5em;
-    }
+  .picks, .pick-up {
+    background-size: 50rem;
+    overflow: hidden;
+    flex-wrap:unset;
   }
+
+  .picks-title {
+    margin-top: 2rem;
+  }
+
 }
 
 /*desktop*/
@@ -98,8 +109,13 @@ BookPreviewCard img {
     border-bottom-left-radius: 20em;
   }
 
+  .picks, .pick-up {
+    background-size: 115rem;
+  }
+
   .picks-title {
     width: 20%;
+    margin-top: 5rem;
   }
 
   h1, h2 {

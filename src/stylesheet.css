@@ -2,7 +2,7 @@ body {
     margin: 0;
 }
 
-h1, h2, h3, h4, h5, a, p {
+h1, h2, h3, h4, h5, h6, a, p {
     font-family: "Montserrat Alternates", sans-serif;
     font-style: normal;
     color: white;
@@ -16,9 +16,7 @@ h1 {
 
 h2 {
     font-weight: 800;
-    display: flex;
     font-size: clamp(1em, 6vw, 2.5em);
-    text-align: left;
     color: #4F2210;
 }
 
@@ -36,7 +34,15 @@ h4 {
 
 h5 {
     color: #4F2210;
-    font-size: clamp(0.1em, 6vw, 1em);
+    font-weight: 400;
+    font-size: clamp(0.5em, 5vw, 1.4em);
+}
+
+h6 {
+    color: #4F2210;
+    font-weight: 600;
+    font-size: clamp(0.5em, 5vw, 1em);
+    margin: 1.2rem 0 0 0.5rem;
 }
 
 a {

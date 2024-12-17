@@ -27,13 +27,17 @@ defineProps({
 
 <style scoped>
 .container {
-  padding: 0.5rem;
-  border-radius: 5px;
-  border: 1px dashed gray;
+  padding: 2rem 0.5rem 2rem 0;
+  flex-grow: 4;
 }
 
 img {
   width: 200px;
   height: 320px;
 }
+
+img:hover {
+  scale: 105%;
+}
+
 </style>

@@ -5,6 +5,8 @@
       <h1>Stories For Everyone</h1>
       <h3>Get ready to find your new favorite book and dive into a whole new world</h3>
     </div>
+    <div class="top-left">
+      <img src="../assets/homepagegif.gif"/></div>
   </div>
 </template>
 <script>
@@ -24,7 +26,7 @@ export default {
     max-width: 150%;
     align-content: flex-start;
     display: flex;
-    margin-bottom: 5em;
+    margin-bottom: 3em;
   }
 
 }
@@ -36,6 +38,13 @@ export default {
   margin: 1rem;
 }
 
+.top-left {
+  position: absolute;
+  margin: 0.5rem;
+  top: 0;
+  height: 150px;
+  width: 150px;
+}
 
 /*ipad (tablet and up) */
 @media only screen and (width > 700px) {
@@ -43,6 +52,7 @@ export default {
     img {
       width: 100%;
       border-bottom-left-radius: 10em;
+      margin-bottom: 5em;
     }
 
     .bottom-right {
@@ -52,6 +62,12 @@ export default {
         margin-left: 10rem;
       }
     }
+  }
+
+  .top-left {
+    top: 4rem;
+    height: 300px;
+    width: 300px;
   }
 }
 
@@ -71,6 +87,13 @@ export default {
     margin-left: 20rem;
   }
 
+  .top-left {
+    top: 4rem;
+    height: 350px;
+    width: 350px;
+  }
 }
+
+
 
 </style>
