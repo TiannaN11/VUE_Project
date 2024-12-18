@@ -6,7 +6,7 @@ const data = [
         publication_date: "11/07/2023",
         page_count: 345,
         reviews: 19400,
-        rating: 3.89 / 5,
+        rating: "3.89 stars out of 5",
         stars: "4stars.png",
         bookCover: "book-cover-good-material.jpg",
         genre: "Historical Fiction, Contemporary, Magical Realism",
@@ -36,7 +36,7 @@ const data = [
         publication_date: "07/30/2024",
         page_count: 416,
         reviews: 5906,
-        rating: "4 / 5 stars",
+        rating: "4 stars out of 5",
         stars: "4stars.png",
         bookCover: "book-cover-real-americans.jpg",
         genre: "Historical Fiction | Contemporary | Magical Realism",
@@ -54,8 +54,9 @@ const data = [
         author: "Claire Lombardo",
         publication_date: "11/07/1978",
         page_count: 498,
-        reviews: 2940,
-        rating: 3.91/5,
+        reviews: 22835,
+        rating: "3.89 stars out of 5",
+        stars: "4stars.png",
         bookCover: "book-cover-same-as-it-ever-was.jpg",
         about: "Julia Ames, after a youth marked by upheaval and emotional turbulence, has found herself on the placid plateau of mid-life. But Julia has never navigated the world with the equanimity of her current privileged class. Having nearly derailed herself several times, making desperate bids for the kind of connection that always felt inaccessible to her, she finally feels, at age fifty seven, that she has a firm handle on things.\n" +
             "\n" +
@@ -70,7 +71,8 @@ const data = [
         publication_date: "05/13/2021",
         page_count: 352,
         reviews: 2526,
-        rating: 4.02/5,
+        rating: "4.02 stars out of 5",
+        stars: "4stars.png",
         bookCover:"book-cover-greta-valdin.jpeg",
         about:"An irresistible and bighearted international bestseller that follows a brother and sister as they navigate queerness, multiracial identity, and the dramas big and small of their entangled, unconventional family, all while flailing their way to love.\n" +
             "\n" +
@@ -87,7 +89,8 @@ const data = [
         publication_date: "01/23/2024",
         page_count: 352,
         reviews: 5712,
-        rating: 4.23/5,
+        rating: "4.23 stars out of 5",
+        stars: "4stars.png",
         bookCover: "book-cover-martyr.jpg",
         about:"Kaveh Akbar’s Martyr! is a paean to how we spend our lives seeking meaning—in faith, art, ourselves, others—in which a newly sober, orphaned son of Iranian immigrants, guided by the voices of artists, poets, and kings, embarks on a search that leads him to a terminally ill painter living out her final days in the Brooklyn Museum.\n" +
             "\n" +
@@ -102,7 +105,8 @@ const data = [
         publication_date: "05/21/2024",
         page_count: 338,
         reviews: 6515,
-        rating: 3.81/5,
+        rating: "3.81 stars out of 5",
+        stars: "4stars.png",
         bookCover: "book-cover-i-hope-this.jpg",
         about:"In this wildly funny and heartwarming office comedy, an admin worker accidentally gains access to her colleagues’ private emails and DMs and decides to use this intel to save her job—a laugh-till-you-cry debut novel you’ll be eager to share with your entire list of contacts, perfect for fans of Anxious People and Eleanor Oliphant Is Completely Fine.\n" +
             "\n" +

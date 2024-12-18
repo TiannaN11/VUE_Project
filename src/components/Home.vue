@@ -1,7 +1,7 @@
 <script setup>
 /* import bookData from './MOCK_DATA.js'*/
 import PrimaryTemplate from "./Template/PrimaryTemplate.vue";
-import bookData from "./MOCK_DATA.js";
+import bookData from "./Data Sets/MOCK_DATA.js";
 import BookPreviewCard from "./BookPreviewCard.vue";
 import Checkout from "./Checkout.vue";
 import ChooseYourGenre from "./ChooseYourGenre.vue";
@@ -9,6 +9,7 @@ import Hero from "./Hero.vue";
 import Newsletter from "./Newsletter.vue";
 import Carousel from "./Carousel.vue";
 import BookLine from "./BookLine.vue";
+import Genres from "./Data Sets/genreData.js";
 
 </script>
 
@@ -32,8 +33,6 @@ import BookLine from "./BookLine.vue";
     </div>
 
     <Checkout/>
-
-    <Carousel/>
 
     <ChooseYourGenre/>
 
@@ -84,6 +83,7 @@ BookPreviewCard img {
   margin: 1rem 0 2rem 0;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 
@@ -91,7 +91,7 @@ BookPreviewCard img {
 /*ipad (tablet and up) */
 @media only screen and (width > 700px) {
   .picks, .pick-up {
-    background-size: 50rem;
+    background-size: 100rem;
     overflow: hidden;
     flex-wrap:unset;
   }
@@ -111,6 +111,7 @@ BookPreviewCard img {
 
   .picks, .pick-up {
     background-size: 115rem;
+    padding: 1rem;
   }
 
   .picks-title {

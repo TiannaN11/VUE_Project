@@ -49,6 +49,7 @@ export default {
 /*ipad (tablet and up) */
 @media only screen and (width > 700px) {
   .hero {
+
     img {
       width: 100%;
       border-bottom-left-radius: 10em;

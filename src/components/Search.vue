@@ -2,7 +2,7 @@
 import PrimaryTemplate from "./Template/PrimaryTemplate.vue";
 import {watch} from "vue";
 import {useRoute} from 'vue-router'
-import bookData from "./MOCK_DATA.js"
+import bookData from "./Data Sets/MOCK_DATA.js"
 import BookPreviewCard from "./BookPreviewCard.vue";
 
 const route = useRoute()

@@ -28,7 +28,7 @@ export default {
 <style scoped>
 
 .checkout {
-  margin: 0;
+  margin: 3rem 0 0 0;
   flex-direction: column;
   align-items: center;
 

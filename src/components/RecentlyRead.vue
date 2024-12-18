@@ -1,6 +1,4 @@
 <template>
-  <h3>Recently Read</h3>
-
   <div class="booksel">
     <div v-for="(book, index) in bookData.data" :key="index">
       <book-preview-card :book="book" :image-only="true"/>
@@ -9,7 +7,7 @@
 </template>
 <script>
 import BookPreviewCard from "./BookPreviewCard.vue";
-import bookData from "./MOCK_DATA.js";
+import bookData from "./Data Sets/MOCK_DATA.js";
 
 
 export default {

@@ -1,24 +1,39 @@
+<script>
+import Carousel from "./Carousel.vue";
+
+export default {
+  name: 'ChooseYourGenre',
+  components: {Carousel}
+
+}
+
+</script>
+
 <template>
+
   <div class="Choose">
     <h2>Choose Your Genre!</h2>
-    <div class="genres">
-
-    </div>
     <h4>With so many books to choose from, let's narrow some niche's down for you</h4>
+    <Carousel/>
   </div>
+
+
 </template>
-<script>
-export default {
-  name: 'ChooseYourGenre'
-}
-</script>
+
 <style scoped>
 
+
+
 .Choose {
+  margin: 4rem 0 4rem 0;
+
   h2, h4 {
-    padding: 1rem;
     text-align: center;
     justify-content: center;
+  }
+
+  Carousel {
+    margin: 4rem 0 0 4rem;
   }
 }
 

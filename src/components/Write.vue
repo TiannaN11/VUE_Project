@@ -38,7 +38,7 @@ import ReflectionResponse from "./ReflectionResponse.vue";
 h1 {
   color: black;
   padding-top: 5rem;
-  margin-left: 1.5rem;
+  text-align: center;
 }
 
 h4 {

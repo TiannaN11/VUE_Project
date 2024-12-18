@@ -1,7 +1,8 @@
 <script setup>
 import PrimaryTemplate from "./Template/PrimaryTemplate.vue";
 import RecentlyRead from "./RecentlyRead.vue";
-import Wishlist from "./Wishlist.vue";
+import Carousel from "./Carousel.vue";
+import Rewards from "./Rewards.vue";
 </script>
 
 <template>
@@ -13,20 +14,30 @@ import Wishlist from "./Wishlist.vue";
   </head>
   <body>
   <div class="image-container">
+
     <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="image">
+
     <div class="overlay-text">
-      <h1> Profile </h1>
-      <img src="../assets/profile-picture.png" alt =profilePic/>
 
-      <div class="follow-count">
-        <div class="following">
-          <h2> 100 </h2>
-          <h5> following </h5>
-        </div>
+      <div class="top">
+        <h1> Profile </h1>
+      </div>
 
-        <div class="followers">
-          <h2> 100K </h2>
-          <h5> followers </h5>
+      <div class="bottom">
+        <div class="follow-count">
+          <div class="following">
+            <h2> 100 </h2>
+            <h5> following </h5>
+          </div>
+
+          <div class="profile-pic">
+            <img src="../assets/Profile%20Pictures/profile-picture.png" alt =profilePic/>
+          </div>
+
+          <div class="followers">
+            <h2> 100K </h2>
+            <h5> followers </h5>
+          </div>
         </div>
       </div>
     </div>
@@ -42,20 +53,34 @@ import Wishlist from "./Wishlist.vue";
         <h5>books read</h5>
       </div>
 
-      <div class="books-read">
-        <h2>400</h2>
-        <h5>books read</h5>
+      <div class="hours-logged">
+        <h2>100,000</h2>
+        <h5>hours logged</h5>
       </div>
 
-      <div class="books-read">
-        <h2>400</h2>
-        <h5>books read</h5>
+      <div class="written-reviews">
+        <h2>395</h2>
+        <h5>written reviews</h5>
       </div>
     </div>
 
-    <RecentlyRead/>
 
-    <RecentlyRead/>
+    <div class="profile-facts">
+      <h2>Recently Read</h2>
+      <RecentlyRead/>
+
+      <h2>Wishlist</h2>
+      <RecentlyRead/>
+
+    </div>
+
+    <div class="BookStoreVisited">
+      <h2>Book Stores Visited</h2>
+      <carousel/>
+    </div>
+
+    <Rewards/>
+
 
 
 
@@ -77,44 +102,54 @@ h2, h4, h5, p {
   color: #4F2210;
 }
 
-.image-container {
+.profile-facts {
+  h2 {
+    color: #4F2210;
+    margin: 2rem 0 0 2rem;
+    text-align: left;
+  }
+}
 
+.BookStoreVisited {
+  h2{
+    margin-bottom: 2rem;
+  }
+}
+
+
+.image-container {
   img {
     display: block;
-    width: 100%;
     opacity: 80%;
-    background-size: auto 800px;
+    width: 100%;
+    background-size: auto;
     height: 400px;
     background-position: center top;
     background-repeat: no-repeat;
   }
-}
 
-.overlay-text {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-
-  .follow-count {
+  .overlay-text {
     display: flex;
-    gap: 15rem;
-    margin-top: 3rem;
-  }
-
-  /*profile img*/
-  img {
-    opacity: 100%;
-    border-radius: 100%;
-    width: 200px;
-    height: 200px;
-    transform: translate(-50%, -50%);
-    margin-top: 7rem;
-    left: 50%;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
+    top: 35px;
+    left: 50%;
+    right: 50%;
+
+      .follow-count {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+    /*profile img*/
+    img {
+      opacity: 100%;
+      border-radius: 100%;
+      width: 200px;
+      height: 200px;
+    }
   }
 }
 
@@ -126,12 +161,16 @@ h2, h4, h5, p {
 
 .stats {
   display: flex;
-  gap: 80px;
+  gap: 50px;
   justify-content: center;
   background-color: #F8E6CC;
-  width: 100%;
   height: 120px;
   align-items: center;
+  padding: 0 2rem 2rem 2rem;
+
+  .books-read, .hours-logged, .written-reviews {
+    padding: 0;
+  }
 
 }
 
@@ -139,15 +178,22 @@ h2, h4, h5, p {
 
 /*ipad (tablet and up) */
 @media only screen and (width > 700px) {
-  .overlay-text {
-    top: 25%;
-    .follow-count{
-      gap: 20rem;
+  .overlay-text{
+    .bottom{
+      .follow-count{
+        gap: 5rem;
+      }
     }
   }
 
   .User-name {
     padding-top: 4rem;
+  }
+
+  .image-container {
+    img {
+      background-size: auto 1500px;
+    }
   }
 
 

@@ -1,6 +1,6 @@
 <script setup>
 
-import MOCK_DATA from "./MOCK_DATA.js";
+import MOCK_DATA from "./Data Sets/MOCK_DATA.js";
 
 </script>
 

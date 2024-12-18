@@ -15,13 +15,8 @@ defineProps({
 <template>
   <div class="container">
     <router-link :to=" { name: 'BookDetails', params: { id: book.id } }">
-      <img :src="'../../src/assets/' + book.bookCover" alt="cover"/>
+      <img :src="'../../src/assets/books/' + book.bookCover" alt="cover"/>
     </router-link>
-
-    <div v-if="!imageOnly">
-      <p v-text="book.author"/>
-      <p>Rating: {{ book.rating }}</p>
-    </div>
   </div>
 </template>
 

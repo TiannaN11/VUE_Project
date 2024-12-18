@@ -1,7 +1,10 @@
 <script setup>
 import {useRoute, useRouter} from "vue-router"
-import allBooks from "./MOCK_DATA.js"
+import allBooks from "./Data Sets/MOCK_DATA.js"
 import PrimaryTemplate from "./Template/PrimaryTemplate.vue";
+import Carousel from "./Carousel.vue";
+import Revieww from "./Revieww.vue";
+
 
 const route = useRoute()
 const router = useRouter()
@@ -26,12 +29,12 @@ const book = allBooks.data.filter(book => book.id === paramId)[0]
           <div class="left">
             <div class="book-cover">
               <router-link :to=" { name: 'BookDetails', params: { id: book.id } }">
-                <img :src="'../../src/assets/' + book.bookCover" alt="cover"/>
+                <img :src="'../../src/assets/books/' + book.bookCover" alt="cover"/>
               </router-link>
             </div>
 
             <div class="rating">
-              <img :src="'../../src/assets/' + book.stars" alt="stars"/>
+              <img :src="'../../src/assets/stars/' + book.stars" alt="stars"/>
               <p>{{book.rating}}</p>
             </div>
           </div>
@@ -48,11 +51,26 @@ const book = allBooks.data.filter(book => book.id === paramId)[0]
               <router-link :to="{name: 'Write'}">Review</router-link>
             </div>
           </div>
-
         </div>
       </div>
 
-      <Bookstores/>
+
+      <div class="bookstores">
+        <h2>Where to Find</h2>
+        <carousel/>
+      </div>
+
+      <div class="reviews">
+        <h2>Reviews</h2>
+
+        <Revieww/>
+        <Revieww/>
+        <Revieww/>
+        <Revieww/>
+        <Revieww/>
+
+      </div>
+
 
 
     </primary-template>
@@ -104,7 +122,7 @@ h1, h2, h4, p {
 
 .book-cover {
   img {
-    width: 200px;
+    width: 220px;
     height: 320px;
   }
 }
@@ -127,13 +145,27 @@ h1, h2, h4, p {
   justify-items: center;
 }
 
+.bookstores {
+  h2{
+    text-align:center;
+    margin-bottom: 2rem;
+  }
+  margin-bottom: 10rem;
+}
+
+.reviews {
+  h2{
+    text-align:center;
+    margin-bottom: 2rem;
+  }
+}
 
 /*ipad (tablet and up) */
 @media only screen and (width > 700px) {
 
   .main {
     .book-title {
-      margin-top: 8rem;
+      margin-top: 9rem;
     }
   }
 
@@ -147,6 +179,11 @@ h1, h2, h4, p {
     }
   }
 
+}
+
+
+/*desktop*/
+@media only screen and (width > 1000px) {
   .book-cover {
     img {
       width: 380px;
@@ -161,12 +198,6 @@ h1, h2, h4, p {
       padding: 1rem;
     }
   }
-}
-
-
-/*desktop*/
-@media only screen and (width > 800px) {
-
 }
 
 </style>
