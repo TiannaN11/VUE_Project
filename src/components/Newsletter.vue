@@ -1,3 +1,6 @@
+<script>
+</script>
+
 <template>
   <div class="newsletter">
     <h1>Join our Newsletter!</h1>
@@ -7,19 +10,22 @@
       <form>
         <label for="email"></label>
         <input type="text" id="email" name="email" placeholder="bookworm@gmail.com">
-          <input type="submit">
+        <input type="submit">
       </form>
     </div>
   </div>
-
-
 </template>
-<script>
-export default {
-  name: 'Newsletter'
-}
-</script>
+
 <style scoped>
+
+/*text format*/
+h1 {
+  padding-top: 3rem;
+}
+
+h3 {
+  padding: 0 3rem 0 3rem;
+}
 
 
 .newsletter {
@@ -27,27 +33,18 @@ export default {
   margin-top: 5rem;
   height: 20rem;
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
 }
 
-h1 {
-  padding-top: 2rem;
-}
-
-h3 {
-  padding: 0 2rem 0 2rem;
-}
-
-
+/*form*/
 .form, input[type="text"], input[type="submit"] {
-  font-family:"Montserrat Alternates", sans-serif;
+  font-family: "Montserrat Alternates", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: clamp(0.2em, 6vw, 1em);
   color: white;
   padding: .7em;
   border-radius: 2rem;
-
 }
 
 input[type="text"] {
@@ -55,7 +52,6 @@ input[type="text"] {
   margin-right: 0.5rem;
   width: 15em;
 }
-
 
 input[type="submit"] {
   width: 8em;

@@ -318,6 +318,10 @@ footer {
       a {
         font-size: 1em;
       }
+
+      a:hover {
+        color: white;
+      }
     }
 
     .left {

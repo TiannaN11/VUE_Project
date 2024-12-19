@@ -1,5 +1,7 @@
-<template>
+<script>
+</script>
 
+<template>
   <h2>Rewards & Badges</h2>
   <div class="rewards">
     <div class="award1">
@@ -49,16 +51,12 @@
             fill="#6C9856"/>
       </svg>
     </div>
-
   </div>
 </template>
-<script>
-export default {
-  name: 'Rewards'
-}
-</script>
+
 <style scoped>
 
+/*text format*/
 h2 {
   align-items: center;
   color: #4F2210;
@@ -66,10 +64,11 @@ h2 {
   text-align: center;
 }
 
+/*reward svgs*/
 .rewards {
   display: flex;
   justify-content: space-around;
-  margin: 2rem 0 12rem 0;
+  margin: 0 5rem 12rem 5rem;
 
   svg {
     width: 90px;
@@ -80,27 +79,26 @@ h2 {
 
 /*ipad (tablet and up) */
 @media only screen and (width > 700px) {
-
   .rewards {
-    margin-bottom: 6rem;
+    margin: 0 8rem 6rem 8rem;
+
     svg {
       width: 100px;
       height: 100px;
     }
   }
-
 }
 
 /*desktop*/
 @media only screen and (width > 800px) {
-
   .rewards {
+    margin: 0 10rem 6rem 10rem;
+
     svg {
       width: 200px;
       height: 200px;
     }
   }
-
 }
 
 </style>

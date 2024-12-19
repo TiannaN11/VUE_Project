@@ -21,9 +21,9 @@ defineProps({
 </template>
 
 <style scoped>
+
 .container {
   padding: 2rem 0.5rem 2rem 0;
-  flex-grow: 4;
 }
 
 img {

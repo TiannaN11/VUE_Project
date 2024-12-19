@@ -1,3 +1,6 @@
+<script>
+</script>
+
 <template>
   <div class="checkout">
 
@@ -17,18 +20,14 @@
         </svg>
       </router-link>
     </div>
-
   </div>
+
 </template>
-<script>
-export default {
-  name: 'Checkout'
-}
-</script>
+
 <style scoped>
 
 .checkout {
-  margin: 3rem 0 0 0;
+  margin-top: 3rem;
   flex-direction: column;
   align-items: center;
 
@@ -37,11 +36,18 @@ export default {
     height: 100%;
   }
 
+  /*text format*/
+
   h2, h4 {
     width: 70%;
     margin-left: 2rem;
   }
 
+  .checkout-text{
+    margin-left: 2.5rem;
+  }
+
+  /*button*/
   a {
     svg {
       margin-left: 6rem;
@@ -52,13 +58,7 @@ export default {
       scale: 155%;
     }
   }
-
-  .checkout-text{
-    margin-left: 1rem;
-  }
 }
-
-
 
 
 /*ipad (tablet and up) */
@@ -69,13 +69,14 @@ export default {
     flex-direction: row;
   }
 
-  .checkout-text {
-    width: 50%;
-  }
-
   .checkout img {
     border-bottom-right-radius: 5000px;
     border-top-right-radius: 5000px;
+  }
+
+  /*text format*/
+  .checkout-text {
+    width: 52%;
   }
 
   h2, h4 {
@@ -83,9 +84,5 @@ export default {
   }
 }
 
-/*desktop*/
-@media only screen and (width > 800px) {
-
-}
 
 </style>

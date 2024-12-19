@@ -1,5 +1,4 @@
 <script setup>
-/* import bookData from './MOCK_DATA.js'*/
 import PrimaryTemplate from "./Template/PrimaryTemplate.vue";
 import bookData from "./Data Sets/MOCK_DATA.js";
 import BookPreviewCard from "./BookPreviewCard.vue";
@@ -7,29 +6,19 @@ import Checkout from "./Checkout.vue";
 import ChooseYourGenre from "./ChooseYourGenre.vue";
 import Hero from "./Hero.vue";
 import Newsletter from "./Newsletter.vue";
-import Carousel from "./Carousel.vue";
-import BookLine from "./BookLine.vue";
-import Genres from "./Data Sets/genreData.js";
-
+import BookLine2 from "./BookLine2.vue";
 </script>
 
 <template>
-
-
   <primary-template>
 
     <Hero/>
 
     <div class="picks">
-
       <div class="picks-title">
         <h2>Picks Made Just For You</h2>
       </div>
-
-        <div class="book-line" v-for="(book, index) in bookData.data" :key="index">
-          <book-preview-card :book="book" :image-only="true"/>
-        </div>
-
+      <book-line2 :book-data="bookData.data"/>
     </div>
 
     <Checkout/>
@@ -37,15 +26,10 @@ import Genres from "./Data Sets/genreData.js";
     <ChooseYourGenre/>
 
     <div class="pick-up">
-
       <div class="picks-title">
         <h2>Pick Up Where You Left Off</h2>
       </div>
-
-      <div class="book-line" v-for="(book, index) in bookData.data" :key="index">
-        <book-preview-card :book="book" :image-only="true"/>
-      </div>
-
+      <book-line2 :book-data="bookData.data"/>
     </div>
 
     <Newsletter/>
@@ -55,45 +39,39 @@ import Genres from "./Data Sets/genreData.js";
 
 <style scoped>
 
+
 BookPreviewCard img {
   align-content: center;
 }
 
+
+/*bookmarks*/
 .picks {
   background-image: url("../assets/bookmark-orange.png");
 }
 
 .picks-title {
-  margin: 1rem 2rem 2rem 1.5rem;
+  margin: 1rem 0 3rem 2rem;
 }
 
 .pick-up {
   background-image: url("../assets/bookmark-green.png");
 }
 
-.book-line {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/*bookmarks*/
 .picks, .pick-up {
   background-size: 32rem;
   background-repeat: no-repeat;
-  margin: 1rem 0 2rem 0;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
 
 
-
 /*ipad (tablet and up) */
 @media only screen and (width > 700px) {
   .picks, .pick-up {
-    background-size: 100rem;
-    overflow: hidden;
-    flex-wrap:unset;
+    background-size: 100%;
+    flex-wrap: unset;
   }
 
   .picks-title {
@@ -110,7 +88,7 @@ BookPreviewCard img {
   }
 
   .picks, .pick-up {
-    background-size: 115rem;
+    background-size: 110rem;
     padding: 1rem;
   }
 

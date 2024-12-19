@@ -1,5 +1,5 @@
 <template>
-  <div class="booksel">
+  <div class="books">
     <div v-for="(book, index) in bookData.data" :key="index">
       <book-preview-card :book="book" :image-only="true"/>
     </div>
@@ -28,12 +28,11 @@ h3 {
   padding-left: 2rem;
 }
 
-.booksel {
+.books {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 3rem;
 }
-
 
 
 /*ipad (tablet and up) */

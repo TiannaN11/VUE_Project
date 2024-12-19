@@ -1,29 +1,38 @@
 const data = [
     {
         id: 1,
-        topic: "romance",
-        image: "romance.png"
+        topic: "Romance",
+        image: "romance.jpg"
     },
     {
         id: 2,
         topic: "Mystery",
-        image: "romance.png"
+        image: "mystery.jpg"
     },
     {
         id: 3,
-        topic: "Thriller",
-        image: "romance.png"
+        topic: "Queer",
+        image: "thriller.jpg"
     },
     {
         id: 4,
         topic: "Drama",
-        image: "romance.png"
+        image: "drama.jpg"
     },
     {
         id: 5,
-        topic: "Non-Fiction",
-        image: "romance.png"
+        topic: "Non-fiction",
+        image: "nonfic.jpg"
     },
-
-    ]
+    {
+        id: 6,
+        topic: "Contemporary",
+        image: "contemporary.jpg"
+    },
+    {
+        id: 7,
+        topic: "Historical Fiction",
+        image: "Historical.jpg"
+    }
+]
 export default {data}

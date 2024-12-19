@@ -1,19 +1,19 @@
+<script>
+</script>
+
 <template>
   <div class="reflection">
     <form>
       <textarea name="text" rows="14" cols="10" wrap="soft" placeholder="Start typing your reflection here"></textarea>
-        <button id="save">SAVE</button>
-        <button id="post">POST</button>
+      <button id="save">SAVE</button>
+      <button id="post">POST</button>
     </form>
   </div>
 </template>
-<script>
-export default {
-  name: 'ReflectionResponse'
-}
-</script>
+
 <style scoped>
 
+/*text format*/
 h1 {
   color: black;
   padding-top: 5rem;
@@ -21,6 +21,7 @@ h1 {
 }
 
 
+/*text area*/
 .reflection {
   margin: 1.5rem;
 
@@ -47,26 +48,22 @@ textarea {
   padding: 1.5rem;
 }
 
+/*buttons*/
+button {
+  border: none;
+  width: 10em;
+  color: white;
+  margin: 1rem 0 0 1rem;
+  border-radius: 5rem;
+}
 
+#save {
+  background-color: #C9A97A;
+}
 
-  button {
-    border: none;
-    width: 10em;
-    color: white;
-    margin: 1rem 0 0 1rem;
-    border-radius: 5rem;
-  }
-
-  #save {
-    background-color: #C9A97A;
-  }
-  #post {
-    background-color: #535bf2;
-  }
-
-
-
-
+#post {
+  background-color: #535bf2;
+}
 
 
 </style>

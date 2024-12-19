@@ -1,3 +1,7 @@
+
+<script>
+</script>
+
 <template>
   <div class="hero">
     <img src="../assets/home-hero-2.png" alt="hero"/>
@@ -9,28 +13,25 @@
       <img src="../assets/homepagegif.gif"/></div>
   </div>
 </template>
-<script>
-export default {
-  name: 'Hero'
-}
-</script>
+
 <style scoped>
 
-/*mobile first*/
 .hero {
   position: relative;
   text-align: right;
   color: white;
+  margin: 0;
 
   img {
-    max-width: 150%;
-    align-content: flex-start;
+    margin-bottom: 2em;
+    width: 150%;
+    background-size: cover;
     display: flex;
-    margin-bottom: 3em;
+    overflow: hidden;
   }
-
 }
 
+/* text overlay */
 .bottom-right {
   position: absolute;
   bottom: 5px;
@@ -49,11 +50,10 @@ export default {
 /*ipad (tablet and up) */
 @media only screen and (width > 700px) {
   .hero {
-
     img {
-      width: 100%;
       border-bottom-left-radius: 10em;
       margin-bottom: 5em;
+      width: 100%;
     }
 
     .bottom-right {
@@ -65,6 +65,7 @@ export default {
     }
   }
 
+  /* gif */
   .top-left {
     top: 4rem;
     height: 300px;
@@ -75,10 +76,10 @@ export default {
 /*desktop*/
 @media only screen and (width > 800px) {
   .hero img {
-    width: 100%;
     border-bottom-left-radius: 20em;
   }
 
+  /*text format*/
   h1, h2 {
     padding-right: 2rem;
     margin: 0;
@@ -88,6 +89,7 @@ export default {
     margin-left: 20rem;
   }
 
+  /*gif*/
   .top-left {
     top: 4rem;
     height: 350px;

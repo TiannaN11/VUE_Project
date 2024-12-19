@@ -1,6 +1,6 @@
 <template>
   <div class="question">
-    <h3>Question #1</h3>
+    <h3>Question</h3>
     <slot>
     </slot>
     <form>
@@ -16,6 +16,7 @@ export default {
 </script>
 <style scoped>
 
+/*text format*/
 h3 {
   color: #A07234;
   margin-left: 1rem;
@@ -45,7 +46,6 @@ textarea {
   padding: 6px;
 }
 
-
 /* button */
 button {
   border: none;
@@ -54,20 +54,15 @@ button {
   color: white;
   margin-top: 1rem;
   border-radius: 5rem;
-
-  :hover {
-  }
 }
-
 
 .question {
   padding-top: 5rem;
   margin: 1.5rem;
+
   textarea {
     height: 15em;
   }
 }
-
-
 
 </style>

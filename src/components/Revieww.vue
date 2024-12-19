@@ -1,3 +1,6 @@
+<script>
+</script>
+
 <template>
   <div class="review-card">
     <div class="profile">
@@ -15,23 +18,23 @@
     <div class="right">
       <h4>Reviewer</h4>
       <img src="../assets/Stars/4stars.png"/>
-      <p>I thought this book was amazing and it really made me think about how we live our lives. The author's unique approach to the storyline introduced a diverse view into how our environment affects who we are as people. I'd recommend this book to anyone looking for a thought-provoking read.</p>
+      <p>I thought this book was amazing and it really made me think about how we live our lives. The author's unique
+        approach to the storyline introduced a diverse view into how our environment affects who we are as people. I'd
+        recommend this book to anyone looking for a thought-provoking read.</p>
     </div>
 
-    </div>
+  </div>
 
 </template>
-<script>
-export default {
-  name: 'Revieww'
-}
-</script>
+
 <style scoped>
 
+/*text format*/
 h1, h2, h4, p {
   color: black;
   margin: 0.5rem;
 }
+
 
 .review-card {
   display: flex;
@@ -40,10 +43,12 @@ h1, h2, h4, p {
   border-radius: 2rem;
   padding: 2rem;
 
-  .profile{
+  .profile {
     justify-items: center;
     align-items: center;
     margin: 0.5rem;
+
+    /*profile picture*/
 
     img {
       width: 80px;
@@ -52,27 +57,17 @@ h1, h2, h4, p {
     }
   }
 
-  .right{
+  /*stars*/
+
+  .right {
     padding: 0.5rem;
 
     img {
       width: 200px;
-      height: 40px;
+      height: 35px;
     }
   }
-
 }
 
-
-/*ipad (tablet and up) */
-@media only screen and (width > 700px) {
-
-}
-
-
-/*desktop*/
-@media only screen and (width > 1000px) {
-
-}
 
 </style>

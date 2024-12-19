@@ -5,8 +5,7 @@ import MOCK_DATA from "./Data Sets/MOCK_DATA.js";
 </script>
 
 <template>
-  Name: {{ MOCK_DATA.book_title }}, {{MOCK_DATA.bookCover}}
-
+  Name: {{ MOCK_DATA.book_title }}, {{ MOCK_DATA.bookCover }}
 </template>
 
 <style scoped>

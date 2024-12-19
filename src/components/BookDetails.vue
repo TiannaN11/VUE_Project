@@ -2,9 +2,9 @@
 import {useRoute, useRouter} from "vue-router"
 import allBooks from "./Data Sets/MOCK_DATA.js"
 import PrimaryTemplate from "./Template/PrimaryTemplate.vue";
-import Carousel from "./Carousel.vue";
+import GenreCarousel from "./GenreCarousel.vue";
 import Revieww from "./Revieww.vue";
-
+import GenresLinkList from "./GenresLinkList.vue";
 
 const route = useRoute()
 const router = useRouter()
@@ -18,10 +18,9 @@ const book = allBooks.data.filter(book => book.id === paramId)[0]
     <primary-template>
 
       <div class="main">
-
         <div class="book-title">
-          <h2>{{ book.book_title}}</h2>
-          <h4>{{ book.author}}</h4>
+          <h2>{{ book.book_title }}</h2>
+          <h4>{{ book.author }}</h4>
         </div>
 
         <div class="container">
@@ -35,17 +34,23 @@ const book = allBooks.data.filter(book => book.id === paramId)[0]
 
             <div class="rating">
               <img :src="'../../src/assets/stars/' + book.stars" alt="stars"/>
-              <p>{{book.rating}}</p>
+              <p>{{ book.rating }}</p>
             </div>
           </div>
 
           <div class="book-info">
-            <h6>Book Title:</h6>  <p>{{ book.book_title}}</p>
-            <h6>Author:</h6> <p>{{ book.author}}</p>
-            <h6>Summary:</h6> <p> {{ book.about }}</p>
-            <h6>Genre:</h6> <p>{{ book.genre }}</p>
-            <h6>Page Count:</h6> <p>{{ book.page_count }}</p>
-            <h6>Publication Date:</h6> <p>{{book.publication_date}}</p>
+            <h6>Book Title:</h6>
+            <p>{{ book.book_title }}</p>
+            <h6>Author:</h6>
+            <p>{{ book.author }}</p>
+            <h6>Summary:</h6>
+            <p> {{ book.about }}</p>
+            <h6>Genre:</h6>
+            <genres-link-list :genres="book.genre"/>
+            <h6>Page Count:</h6>
+            <p>{{ book.page_count }}</p>
+            <h6>Publication Date:</h6>
+            <p>{{ book.publication_date }}</p>
 
             <div class="button">
               <router-link :to="{name: 'Write'}">Review</router-link>
@@ -57,7 +62,7 @@ const book = allBooks.data.filter(book => book.id === paramId)[0]
 
       <div class="bookstores">
         <h2>Where to Find</h2>
-        <carousel/>
+        <genre-carousel/>
       </div>
 
       <div class="reviews">
@@ -72,90 +77,96 @@ const book = allBooks.data.filter(book => book.id === paramId)[0]
       </div>
 
 
-
     </primary-template>
   </section>
 </template>
 
 <style scoped>
 
-h1, h2, h4, p {
+/*text styles*/
+h2 {
+  margin: 1rem;
+}
+
+h4, p {
   color: black;
   margin: 0.5rem;
 }
 
 
+/* main components */
 .main {
- flex-direction: column;
-
+  flex-direction: column;
   .book-title {
     text-align: center;
     margin-top: 3rem;
   }
-
 }
 
+/* Top book container */
 .container {
   flex-direction: column;
   padding: 2.5rem;
   border-radius: 5px;
-
-
   .book-info {
     flex-direction: column;
     margin-bottom: 5rem;
   }
 
+  .left {
+    justify-items: center;
+    .book-cover {
+      img {
+        width: 220px;
+        height: 320px;
+      }
+    }
+  }
+
+  .rating {
+    img {
+      width: 200px;
+      height: 35px;
+      padding: 1rem;
+    }
+    p {
+      text-align: center;
+      margin: 0;
+    }
+  }
 }
 
+/*review button*/
 .button {
   background-color: green;
   border-radius: 5rem;
   text-align: center;
-  padding: 0.5rem;
+  padding: 1rem;
+  margin-top: 2rem;
 
+  :hover {
+    color: lightgreen;
+  }
   a {
     color: white;
     margin: 1rem;
   }
 }
 
-.book-cover {
-  img {
-    width: 220px;
-    height: 320px;
-  }
-}
-
-.rating {
-  img {
-    width: 200px;
-    height: 35px;
-    padding: 1rem;
-  }
-
-  p{
-    text-align: center;
-    margin: 0;
-  }
-}
-
-
-.left {
-  justify-items: center;
-}
-
+/*bookstore component*/
 .bookstores {
-  h2{
-    text-align:center;
+  margin-bottom: 10rem;
+  h2 {
+    text-align: center;
     margin-bottom: 2rem;
   }
-  margin-bottom: 10rem;
 }
 
+/*reviews section*/
 .reviews {
-  h2{
-    text-align:center;
+  margin-bottom: 10rem;
+  h2 {
+    text-align: center;
     margin-bottom: 2rem;
   }
 }
@@ -163,27 +174,34 @@ h1, h2, h4, p {
 /*ipad (tablet and up) */
 @media only screen and (width > 700px) {
 
+  /* main components*/
   .main {
     .book-title {
       margin-top: 9rem;
     }
   }
 
+  /* top book container */
   .container {
     display: flex;
     flex-direction: row;
     padding: 4rem;
-
     .book-info {
       flex-direction: row;
     }
   }
 
+  /* reviews */
+  .reviews {
+    margin-bottom: 5rem;
+  }
 }
 
 
 /*desktop*/
-@media only screen and (width > 1000px) {
+@media only screen and (width > 900px) {
+
+  /*book cover image */
   .book-cover {
     img {
       width: 380px;
@@ -191,6 +209,7 @@ h1, h2, h4, p {
     }
   }
 
+  /*rating component */
   .rating {
     img {
       width: 370px;
@@ -199,5 +218,6 @@ h1, h2, h4, p {
     }
   }
 }
+
 
 </style>
