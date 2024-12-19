@@ -75,7 +75,8 @@ BookPreviewCard img {
   }
 
   .picks-title {
-    margin-top: 2rem;
+    width: 25%;
+    margin: 1rem;
   }
 
 }
@@ -93,7 +94,7 @@ BookPreviewCard img {
   }
 
   .picks-title {
-    width: 20%;
+    width: 35%;
     margin-top: 5rem;
   }
 
